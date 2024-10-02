@@ -1,18 +1,21 @@
 import { useState } from 'react'
-
+import 'bootstrap/dist/css/bootstrap.min.css'
+import BootStrapButton from './BootstrapExample'
+import Header from './components/Header'
 
 function App() {
-  
-  const hello = "Hello";
+  const hello = 'Hello'
 
-  const style ={
-    fontSize:30
+  const style = {
+    fontSize: 30,
   }
 
   return (
     <>
-     <div style={style}>{hello}</div>
-     <div>{hello}</div>
+      <Header></Header>
+      <div style={style}>{hello}</div>
+      <div>{hello}</div>
+      <BootStrapButton />
     </>
   )
 }
