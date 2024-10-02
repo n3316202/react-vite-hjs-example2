@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 function App() {
   
-  const hello = "안녕하세요";
+  const hello = "Hello";
 
   const style ={
     fontSize:30
