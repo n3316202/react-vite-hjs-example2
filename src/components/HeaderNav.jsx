@@ -7,8 +7,8 @@ const HeaderNav = () => {
     <div className="text-center mt-3">
       {routes.map((route, index) =>
         //prettier-ignore
-        <Link key={route.path || index} 
-              to={route.path}>{' '} | {route.title}
+        <Link key={route.path || index} to={route.path}>
+         {' '}{route.title}{' '}|
         </Link>
       )}
     </div>
