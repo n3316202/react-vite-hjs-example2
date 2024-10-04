@@ -5,7 +5,8 @@ const ThreePage = () => {
   return (
     //prettier-ignore
     <div>
-      <Hello3 name="홍길동" color="red" isSpecial={true}></Hello3>
+      <Hello3 name="홍길동" color="red" isSpecial={true} isName={true}></Hello3>
+      <Hello3 name="홍길동" color="red" isSpecial={false} isName={false}></Hello3>
     </div>
   );
 };
