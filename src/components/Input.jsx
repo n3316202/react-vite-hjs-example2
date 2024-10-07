@@ -6,13 +6,17 @@ const Input = () => {
 
   const onChange = (event) => {
     setText(event.target.value);
+    //text = event.target.value;
   };
 
+  const onReset = () => {
+    setText('');
+  };
   //prettier-ignore
   return (
     <div>
       <input onChange={onChange} value={text} />
-      <button>초기화</button>
+      <button onClick={onReset}>초기화</button>
       <div>
         <b>값:{text}</b>
       </div>
