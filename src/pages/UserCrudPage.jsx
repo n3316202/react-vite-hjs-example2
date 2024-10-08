@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useRef } from 'react';
+import CreateUser from '../components/CreateUser';
+import UserList from '../components/UserList';
 
 const UserCrudPage = () => {
   const [users, setUsers] = useState([
@@ -24,7 +27,48 @@ const UserCrudPage = () => {
     email: '',
   });
 
-  return <div></div>;
+  const onChange = (event) => {
+    const { name, value } = event.target;
+
+    setInputs({
+      ...inputs,
+      [name]: value,
+    });
+  };
+
+  const nextId = useRef(users.length + 1);
+
+  const { username, email } = inputs;
+
+  const onCreate = () => {
+    const user = {
+      id: nextId.current,
+      username,
+      email,
+    };
+
+    //
+    setUsers(users.concat(user));
+
+    setInputs({
+      username: '',
+      email: '',
+    });
+
+    nextId.current += 1;
+  };
+
+  //prettier-ignore
+  return (
+  <div className="text-center mt-5">
+      <CreateUser 
+        username={username} 
+        email={email} 
+        onChange={onChange}
+        onCreate={onCreate}
+      />
+      <UserList users={users}></UserList>
+  </div>);
 };
 
 export default UserCrudPage;
