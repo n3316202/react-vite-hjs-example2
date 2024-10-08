@@ -30,7 +30,7 @@ const UserArrayPage = () => {
 
   //prettier-ignore
   return(
-  <div>
+  <div className="text-center mt-5">
     <CreateUser></CreateUser>
   </div>);
 };
