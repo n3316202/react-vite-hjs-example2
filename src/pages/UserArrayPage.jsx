@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import CreateUser from '../components/CreateUser';
+import UserList from '../components/UserList';
 
 const UserArrayPage = () => {
   const users = [
@@ -32,6 +33,7 @@ const UserArrayPage = () => {
   return(
   <div className="text-center mt-5">
     <CreateUser></CreateUser>
+    <UserList users={users}></UserList> 
   </div>);
 };
 
