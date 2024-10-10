@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // 정리하면 아래와 같다.
 
@@ -18,6 +18,22 @@ import React, { useState } from 'react';
 const UseEffectExample = () => {
   const [firstCount, setFirstCount] = useState(0);
   const [secondCount, setSecondCount] = useState(0);
+
+  useEffect(() => {
+    // 매 렌더링마다 실행
+    console.log(`매랜더링 마다 실행 ${Date()}`);
+  });
+
+  useEffect(() => {
+    // 컴포넌트가 처음 렌더링된 실행
+    console.log(`처음 랜더링 될때만 실행 ${Date()}`);
+  }, []);
+
+  useEffect(() => {
+    // 컴포넌트가 처음 렌더링된 이후 실행
+    //  a나 b가 변경되어 컴포넌트가 재렌더링된 이후 실행
+    console.log(`컴포넌트 변경 ${Date()}`);
+  }, [firstCount, secondCount]);
 
   const firstCountHandler = () => {
     setFirstCount((s) => s + 1);

@@ -1,8 +1,13 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AxiosClient = () => {
   const [data, setData] = useState([]);
+
+  //처음 랜더링 될때 한번만 실행 시키고 싶다.
+  useEffect(() => {
+    getClick();
+  }, []);
 
   const getClick = () => {
     axios
@@ -19,22 +24,6 @@ const AxiosClient = () => {
       .then(() => {
         // try catch finally 에서 finally 부분에 해당
         console.log('에러가 나든 안나든 무조건 실행');
-      });
-  };
-
-  const postClick = () => {
-    axios
-      .post('https://jsonplaceholder.typicode.com/posts', {
-        userId: 123423,
-        id: 101,
-        body: 'test body홍길동',
-        title: 'test title 홍길동',
-      })
-      .then((response) => {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
       });
   };
 
