@@ -13,6 +13,7 @@ import UserArrayPage from '../pages/UserArrayPage';
 import UserCrudPage from '../pages/UserCrudPage';
 import AxiosPage from './../pages/AxiosPage';
 import AxiosClientPage from '../pages/AxiosClientPage';
+import UseEffectPage from '../pages/UseEffectPage';
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -81,6 +82,11 @@ const routes = [
     path: '/axiosclient',
     element: <AxiosClientPage />,
     title: 'Axios클라이언트',
+  },
+  {
+    path: '/effect',
+    element: <UseEffectPage />,
+    title: '유즈이펙트(useEffect)',
   },
 ];
 
