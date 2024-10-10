@@ -10,7 +10,7 @@ const AxiosClient = () => {
       .then((response) => {
         //통신이 성공 했을때
         console.log(response);
-        //setData(response.data);
+        setData(response.data.contacts);
       })
       .catch(function (error) {
         //에러가 났을때 실행
@@ -42,20 +42,39 @@ const AxiosClient = () => {
     <div>
       <h2>클라이언트 테이블 받아오기 연습</h2>
       <button onClick={getClick}>클라이언트 데이타</button>
-      <button onClick={postClick}>Post방식</button>
-
       <hr />
+
+      <table width="500" border="1">
+        <tr>
+          <td>번호</td>
+          <td>이름</td>
+          <td>전화번호</td>
+          <td>주소</td>
+          <td>사진</td>
+          <td>삭제</td>
+        </tr>
+      </table>
 
       {data.map((post, index) => (
         <>
-          <div key={index}>
-            <h3>타이틀:{post.title}</h3>
-            <div>
-              유저아이디:{post.userId} , 아이디:{post.id}
-            </div>
-            <div>바디:{post.body}</div>
-          </div>
-          <hr />
+          <tr key={index}>
+            <td>{post.no}</td>
+            <td>{post.name}</td>
+            <td>{post.tel}</td>
+            <td>{post.address}</td>
+            <td>
+              <img src={post.photo} />
+            </td>
+            <td>
+              <input
+                name={post.no}
+                id={post.no}
+                type="button"
+                class="del-button"
+                value="삭제"
+              />
+            </td>
+          </tr>
         </>
       ))}
     </div>
