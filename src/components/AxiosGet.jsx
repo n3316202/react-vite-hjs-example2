@@ -23,10 +23,27 @@ const AxiosGet = () => {
       });
   };
 
+  const postClick = () => {
+    axios
+      .post('https://jsonplaceholder.typicode.com/posts', {
+        userId: 123423,
+        id: 101,
+        body: 'test body홍길동',
+        title: 'test title 홍길동',
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
   return (
     <div>
       <h2>엑시오스(axios) 연습</h2>
       <button onClick={getClick}>Get방식</button>
+      <button onClick={postClick}>Post방식</button>
 
       <hr />
 
