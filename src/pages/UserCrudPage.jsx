@@ -29,6 +29,20 @@ const UserCrudPage = () => {
 
   const onChange = (event) => {
     const { name, value } = event.target;
+    /*
+  <input
+        name="username"
+        placeholder="계정명"
+        onChange={onChange}
+        value={username}
+      />
+      <input
+        name="email"
+        placeholder="이메일"
+        onChange={onChange}
+        value={email}
+      />
+    */
 
     setInputs({
       ...inputs,
@@ -61,6 +75,8 @@ const UserCrudPage = () => {
   const onRemove = (id) => {
     // user.id 가 파라미터로 일치하지 않는 원소만 추출해서 새로운 배열을 만듬
     // = user.id 가 id 인 것을 제거함
+    // users.filter((user) => user.id !== id
+
     setUsers(users.filter((user) => user.id !== id));
   };
 
@@ -74,7 +90,9 @@ const UserCrudPage = () => {
         onCreate={onCreate}
       />
       <UserList users={users} onRemove={onRemove}></UserList>
-  </div>);
+  </div>
+    
+);
 };
 
 export default UserCrudPage;
