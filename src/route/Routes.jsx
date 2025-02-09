@@ -3,7 +3,7 @@ import HomePage from '../pages/HomePage';
 import BoardPage from '../pages/BoardPage';
 import ProfilePage from '../pages/ProfilePage';
 import PropsPage from '../pages/PropsPage';
-import ThreePage from '../pages/ThreePage';
+import ConditionalPage from '../pages/ConditionalPage';
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -28,8 +28,8 @@ const routes = [
     title: '프롭스',
   },
   {
-    path: '/three',
-    element: <ThreePage />,
+    path: '/conditional',
+    element: <ConditionalPage />,
     title: '조건부랜더링',
   },
 ];
