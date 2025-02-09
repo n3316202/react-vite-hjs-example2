@@ -14,11 +14,19 @@ function App() {
     <>
       <BrowserRouter>
         <HeaderNav />
-        <Routes>
-          {routes.map((route, index) => {
-            return <Route key={route.path || index} path={route.path} element={route.element}></Route>;
-          })}
-        </Routes>
+        <div className="text-center mt-5">
+          <Routes>
+            {routes.map((route, index) => {
+              return (
+                <Route
+                  key={route.path || index}
+                  path={route.path}
+                  element={route.element}
+                ></Route>
+              );
+            })}
+          </Routes>
+        </div>
       </BrowserRouter>
     </>
   );
