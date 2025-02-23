@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
 import HomePage from '../pages/HomePage';
 import BoardPage from '../pages/BoardPage';
 import ProfilePage from '../pages/ProfilePage';
 import PropsPage from '../pages/PropsPage';
 import ThreePage from '../pages/ThreePage';
 import CounterPage from '../pages/CounterPage';
+import InlineStylePage from '../pages/cssPages/InlineStylePage';
+import ClassNameUsePage from '../pages/cssPages/ClassNameUsePage';
+import StyledCompnentsPage from '../pages/cssPages/StyledCompnentsPage';
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -37,6 +39,21 @@ const routes = [
     path: '/usestate',
     element: <CounterPage />,
     title: 'useState연습',
+  },
+  {
+    path: '/inline-style',
+    element: <InlineStylePage />,
+    title: '인라인스타일',
+  },
+  {
+    path: '/use-css',
+    element: <ClassNameUsePage />,
+    title: 'CSS파일적용',
+  },
+  {
+    path: '/styled-css',
+    element: <StyledCompnentsPage />,
+    title: 'Styled-Components',
   },
 ];
 
