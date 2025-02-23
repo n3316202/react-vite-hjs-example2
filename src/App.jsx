@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import BootStrapButton from './BootstrapExample'
+import BootstrapExample from './pages/BootstrapExample'
 import Header from './components/Header'
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
       <Header></Header>
       <div style={style}>{hello}</div>
       <div>{hello}</div>
-      <BootStrapButton />
+      <BootstrapExample />
     </>
   )
 }
