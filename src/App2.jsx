@@ -120,7 +120,6 @@ function App2() {
       <BrowserRouter>
         <Routes>
           <Route path="/about" element={<About />}>
-            <Route path="/about/*" element={<About />}></Route>
             {/* <Route path="location" element={<Location />}></Route> */}
           </Route>
           <Route path="/products/:productId" element={<Products />}></Route>
