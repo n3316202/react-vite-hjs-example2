@@ -43,13 +43,13 @@ function Home() {
 function About() {
   const navigate = useNavigate();
 
-  <button
-    onClick={() => {
-      navigate('/about');
-    }}
-  >
-    어바웃 페이지로 이동하기
-  </button>;
+  // <button
+  //   onClick={() => {
+  //     navigate('/about');
+  //   }}
+  // >
+  //   어바웃 페이지로 이동하기
+  // </button>;
 
   return (
     <div>
