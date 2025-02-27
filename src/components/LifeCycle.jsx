@@ -42,6 +42,10 @@ class LifeCycle extends React.Component {
     };
   }
 
+  componentDidMount() {
+    console.log('componentDidMount 실행');
+  }
+
   shouldComponentUpdate(nextProps, nextState) {
     // count 값이 변경될 때만 렌더링
     console.log('새로운 속성: ', nextProps);
