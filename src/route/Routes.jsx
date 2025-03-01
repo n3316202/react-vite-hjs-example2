@@ -14,6 +14,11 @@ import UserCrudPage from '../pages/UserCrudPage';
 import AxiosPage from './../pages/AxiosPage';
 import AxiosClientPage from '../pages/AxiosClientPage';
 import UseEffectPage from '../pages/UseEffectPage';
+import ContextApiExPage from '../pages/ContextApiExPage';
+import ContextApiExPage2 from '../pages/ContextApiExPage2';
+import ContextApiCounter from '../pages/ContextApiCounter';
+import CounterContextPage from '../pages/CounterContextPage';
+import { CountProvider } from '../contexts/CounterContext';
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -87,6 +92,25 @@ const routes = [
     path: '/effect',
     element: <UseEffectPage />,
     title: '유즈이펙트(useEffect)',
+  },
+  {
+    path: '/contextapi',
+    element: <ContextApiExPage />,
+    title: '컨텍스트API 안쓴 예제',
+  },
+  {
+    path: '/contextapi2',
+    element: <ContextApiExPage2 />,
+    title: '컨텍스트API 적요',
+  },
+  {
+    path: '/contextapi3',
+    element: (
+      <CountProvider>
+        <CounterContextPage />
+      </CountProvider>
+    ),
+    title: '컨텍스트API-모듈화-활용',
   },
 ];
 
