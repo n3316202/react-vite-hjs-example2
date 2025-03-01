@@ -19,6 +19,7 @@ import ContextApiExPage2 from '../pages/ContextApiExPage2';
 import ContextApiCounter from '../pages/ContextApiCounter';
 import CounterContextPage from '../pages/CounterContextPage';
 import { CountProvider } from '../contexts/CounterContext';
+import ChildrenPage from '../pages/ChildrenPage';
 
 //React Routes, Route 사용시 배열로 관리하기
 const routes = [
@@ -111,6 +112,11 @@ const routes = [
       </CountProvider>
     ),
     title: '컨텍스트API-모듈화-활용',
+  },
+  {
+    path: '/children',
+    element: <ChildrenPage></ChildrenPage>,
+    title: '프롭스-children',
   },
 ];
 
