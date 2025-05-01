@@ -17,6 +17,9 @@ const CountProvider = ({ children }) => {
     setCount(count - 1);
   };
 
+  // value를 React 트리 내부의 "Context 저장소"에 저장
+  // useContext(MyContext)를 호출한 컴포넌트는 이 value를 사용
+  // 값 저장소 등록기 역할
   return (
     <CountContext.Provider value={{ count, increment, decrement }}>
       {children}
