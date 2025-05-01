@@ -1,5 +1,10 @@
 import { createContext, useState } from 'react';
 
+// ✅ 전체 구조 요약
+// createContext()로 전역 상태 공간을 만들고,
+// useState()로 count 값을 관리하고,
+// Provider로 하위 컴포넌트들에게 이 값을 전달합니다.
+
 const CountContext = createContext();
 
 const CountProvider = ({ children }) => {
